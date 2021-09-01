@@ -27,3 +27,44 @@ computed的function在data更動時才會跟著被觸發，如果data未便鄧�
 ### methods 
 methods內可直接用function綁定事件，例如 : click、input、keyup等。缺點是，當重新渲染發生時，所有的method function全會被觸發一輪，較為耗能。與watch及computed不一樣，屬於主動觸發類型。
 
+## v-if與v-show
+
+### v-for
+如果v-if的結果為false的話，elements將不會出現在html內。
+如果v-show的結果為false的話，elements會存在在html內，但會被用display: none的形式隱藏起來。
+
+eg:
+
+#### HTML
+
+```HTML
+
+<ul id="example-2">
+  <li v-for="(item, index) in items">
+    {{ parentMessage }} - {{ index }} - {{ item.message }}
+  </li>
+</ul>
+
+```
+
+#### Vue
+
+```js
+
+var example2 = new Vue({
+  el: '#example-2',
+    data: {
+      parentMessage: 'Parent',
+      items: [
+        { message: 'Foo' },
+        { message: 'Bar' }
+      ]
+    }
+})
+
+```
+
+####print
+
+    Parent-0-Foo
+    Parent-1-Bar
