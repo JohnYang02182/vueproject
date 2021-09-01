@@ -18,9 +18,12 @@ Vue的架構為MVVM，即Model -- View -- ViewModel，將UI以及Datamodel分離
 
 ## Method 與 Watch 與Computed
 
-watch : 監視變數的值的變化並設定條件，當data變動時才會被觸發。
+### watch
+監視變數的值的變化並設定條件，當data變動時才會被觸發。
 
-computed : computed的function在data更動時才會跟著被觸發，如果data未便鄧畫會直接從快取存取。但function不能帶參數、以及要用return 回傳才行。與watch一樣，當data變動時才會被觸發，。
+### computed
+computed的function在data更動時才會跟著被觸發，如果data未便鄧畫會直接從快取存取。但function不能帶參數、以及要用return 回傳才行。與watch一樣，當data變動時才會被觸發，。
 
-methods : methods內可直接用function綁定事件，例如 : click、input、keyup等。缺點是，當重新渲染發生時，所有的method function全會被觸發一輪，較為耗能。與watch及computed不一樣，屬於主動觸發類型。
+### methods 
+methods內可直接用function綁定事件，例如 : click、input、keyup等。缺點是，當重新渲染發生時，所有的method function全會被觸發一輪，較為耗能。與watch及computed不一樣，屬於主動觸發類型。
 
