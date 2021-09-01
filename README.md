@@ -26,11 +26,12 @@ Vue的架構為MVVM，即Model -- View -- ViewModel，將UI以及Datamodel分離
 監視變數的值的變化並設定條件，當data變動時才會被觸發。
 
 ### computed
-computed的function在data更動時才會跟著被觸發，如果data未便鄧畫會直接從快取存取。`  `
-但function不能帶參數、以及要用return 回傳才行。與watch一樣，當data變動時才會被觸發，。
+computed的function在data更動時才會跟著被觸發，如果data未變動畫會直接從快取存取。  
+但function不能帶參數、以及要用return 回傳才行。與watch一樣，當data變動時才會被觸發。  
 
 ### methods 
-methods內可直接用function綁定事件，例如 : click、input、keyup等。缺點是，當重新渲染發生時，所有的method function全會被觸發一輪，較為耗能。與watch及computed不一樣，屬於主動觸發類型。
+methods內可直接用function綁定事件，例如 : click、input、keyup等。缺點是，當重新渲染發生時，所有的method function全會被觸發一輪，較為耗能。  
+與watch及computed不一樣，屬於主動觸發類型。
 
 
 ## v-if與v-show
@@ -38,16 +39,16 @@ methods內可直接用function綁定事件，例如 : click、input、keyup等�
 
 #### v-if 與 v-show同時都有具備制定條件的功能，不同的地方在於: 
 
-如果v-if的結果為false的話，elements將不會出現在html內。
-如果v-show的結果為false的話，elements會存在在html內，但會被用display: none的形式隱藏起來。
+如果v-if的結果為false的話，elements將不會出現在html。  
+如果v-show的結果為false的話，elements會存在在html內，但會被用display: none的形式隱藏起來。  
 
 
 ## v-for
 
 
-v-for可以迭代array中的elements以及objects中的elements。
-假設v-for="(item,index) in items"，items為array。
-將可以從v-for當中分別提煉出elements為items(items為別名)，array的序列為index(index為別名)。
+v-for可以迭代array中的elements以及objects中的elements。  
+假設v-for="(item,index) in items"，items為array。  
+將可以從v-for當中分別提煉出elements為items(items為別名)，array的序列為index(index為別名)。  
 
 eg:
 
@@ -87,8 +88,8 @@ var example2 = new Vue({
     
 
 
-假設v-for="(index,key,value) in items", items為objects。
-將可以從v-for當中提煉出，objects的順序--index(別名)，obeject的鍵值為key(別名)，objects內儲存的資料為value(別名)。
+假設v-for="(index,key,value) in items", items為objects。  
+將可以從v-for當中提煉出，objects的順序--index(別名)，obeject的鍵值為key(別名)，objects內儲存的資料為value(別名)。  
 
 eg:
 
