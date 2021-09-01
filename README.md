@@ -6,8 +6,8 @@
 
 ### 基本語法
 
-> Vue的基礎
-> Vue的架構為MVVM，即Model -- View -- ViewModel，將UI以及Datamodel分離得相當徹底。如果需將各個元件拆分並套版化的話相當推薦使用vue。
+Vue的基礎
+Vue的架構為MVVM，即Model -- View -- ViewModel，將UI以及Datamodel分離得相當徹底。如果需將各個元件拆分並套版化的話相當推薦使用vue。
 
 > --理解Declarative 與 Imperative
 > Declarative : 宣告式，Vue使用的主要概念，注重what，邏輯比較抽象。
