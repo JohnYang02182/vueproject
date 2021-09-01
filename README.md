@@ -64,7 +64,7 @@ var example2 = new Vue({
 
 ```
 
-####print
+#### print
 
     Parent-0-Foo
     Parent-1-Bar
