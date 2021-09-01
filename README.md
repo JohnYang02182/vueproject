@@ -29,9 +29,17 @@ methods內可直接用function綁定事件，例如 : click、input、keyup等�
 
 ## v-if與v-show
 
-### v-for
+#### v-if 與 v-show同時都有具備制定條件的功能，不同的地方在於: 
+
 如果v-if的結果為false的話，elements將不會出現在html內。
 如果v-show的結果為false的話，elements會存在在html內，但會被用display: none的形式隱藏起來。
+
+
+## v-for
+
+v-for可以迭代array中的elements以及objects中的elements。
+假設v-for="(item,index) in items"，items為array。
+將可以從v-for當中分別提煉出elements為items(items為別名)，array的序列為index(index為別名)。
 
 eg:
 
@@ -64,6 +72,42 @@ var example2 = new Vue({
 
 ```
 
+#### print
+
+    Parent-0-Foo
+    Parent-1-Bar
+    
+
+假設v-for="(index,key,value) in items", items為objects。
+將可以從v-for當中提煉出，objects的順序--index(別名)，obeject的鍵值為key(別名)，objects內儲存的資料為value(別名)。
+
+eg:
+
+#### HTML
+
+```HTML
+
+<div v-for="(value, name, index) in object">
+  {{ index }}. {{ name }}: {{ value }}
+</div>
+
+```
+#### Vue
+
+```js
+
+new Vue({
+  el: '#v-for-object',
+  data: {
+    object: {
+      title: 'How to do lists in Vue',
+      author: 'Jane Doe',
+      publishedAt: '2016-04-10'
+    }
+  }
+})
+
+```
 #### print
 
     Parent-0-Foo
